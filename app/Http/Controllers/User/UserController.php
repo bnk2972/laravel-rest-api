@@ -138,7 +138,6 @@ class UserController extends ApiController
             Mail::to($user)->send(new UserCreated($user));
         }, 100);
 
-        Mail::to($user)->send(new UserCreated($user));
         return $this->showMessage('The verification email has been resend');
     }
 }
